@@ -1,0 +1,115 @@
+# depslib dependency file v1.0
+1619485307 source:c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 11\ejercicio 4 - isempty\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"Empleados.h"
+
+1619484462 c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 11\ejercicio 4 - isempty\empleados.h
+
+1619484462 source:c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 11\ejercicio 4 - isempty\empleados.h
+
+1619482262 source:c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 11\ejercicio 4 - isempty\empleados.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"Empleados.h"
+
+1619548684 source:c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 12\abm\empleados.h
+	"sectores.h"
+
+1619503650 source:c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 12\abm\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"Empleados.h"
+	"sectores.h"
+
+1619548684 c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 12\abm\empleados.h
+	"sectores.h"
+
+1619548727 source:c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 12\abm\empleados.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"Empleados.h"
+	"sectores.h"
+
+1619500877 c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 12\abm\sectores.h
+
+1619503650 source:c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 12\abm\sectores.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"Empleados.h"
+	"sectores.h"
+
+1619503527 source:e:\backupo\abm\empleados.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"Empleados.h"
+	"sectores.h"
+
+1619503187 e:\backupo\abm\empleados.h
+	"sectores.h"
+
+1619500877 e:\backupo\abm\sectores.h
+
+1619503187 source:e:\backupo\abm\empleados.h
+	"sectores.h"
+
+1619503650 source:e:\backupo\abm\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"Empleados.h"
+	"sectores.h"
+
+1619503650 source:e:\backupo\abm\sectores.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"Empleados.h"
+	"sectores.h"
+
+1619743970 source:c:\users\tomas\desktop\abm-main\empleados.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"Empleados.h"
+	"sectores.h"
+
+1619743970 c:\users\tomas\desktop\abm-main\empleados.h
+	"sectores.h"
+
+1619743970 c:\users\tomas\desktop\abm-main\sectores.h
+
+1619743970 source:c:\users\tomas\desktop\abm-main\empleados.h
+	"sectores.h"
+
+1619743970 source:c:\users\tomas\desktop\abm-main\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"Empleados.h"
+	"sectores.h"
+
+1619743970 source:c:\users\tomas\desktop\abm-main\sectores.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"Empleados.h"
+	"sectores.h"
+
