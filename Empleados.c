@@ -2,8 +2,12 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
-#include "Empleados.h"
+#include "empleados.h"
 #include "sectores.h"
+#include "utn_inputs.h"
+#include "informes.h"
+#include "datawarehouse.h"
+
 
 void inicializarEmpleados(eEmpleado dotacion[], int tam){
     for (int x = 0; x < tam; x++){
@@ -40,7 +44,7 @@ void mostrarEmpleados (eEmpleado lista[], int tam, eSector sectores[], int tamse
         if (!flag){
             printf("\nNo hay empleados que mostrar!\n");
         }
-
+        printf("\n");
 }
 
 int buscarLibre(eEmpleado lista[], int tam){
@@ -55,10 +59,10 @@ int buscarLibre(eEmpleado lista[], int tam){
     return index;
 }
 
-int buscarEmpleado(eEmpleado lista[], int tam, int legajo, eSector sector[]){
+int buscarEmpleado(eEmpleado lista[], int tam, int legajo){
     int indice = -1;
     for (int x = 0; x < tam; x++){
-        if (lista[x].legajo == legajo){
+        if (lista[x].legajo == legajo && lista[x].isEmpty == 0){
             indice = x;
             break;
         }
@@ -80,7 +84,9 @@ int ingresarEmpleado(eEmpleado nomina[], int tam, int *pId, eSector sector[], in
                 printf("\nIngreso de sector:\n");
                 mostrarSectores(sector, tamsec);
                 printf("\n\nSeleccione uno: ");
-                scanf("%d", &nuevoEmpleado.idSector);
+                while(obtenerSector(sector, tamsec, &nuevoEmpleado.idSector) < 0){
+                   printf("\nError!Ingrese sector real!\n");
+                }
 
                 printf("Ingrese nombre\n");
                 fflush(stdin);
@@ -93,24 +99,24 @@ int ingresarEmpleado(eEmpleado nomina[], int tam, int *pId, eSector sector[], in
                     printf("\nError! Ingrese edad correcta!");
                 }
 
-                do{
-                printf("Ingrese sexo (m/f)\n");
                 fflush(stdin);
-                scanf("%c", &nuevoEmpleado.sexo);
-
-                if (tolower(nuevoEmpleado.sexo) != 'm' && tolower(nuevoEmpleado.sexo) != 'f'){
-                    printf("\nError! Ingrese sexo\n");
-                    fflush(stdin);
-                    scanf("%c", &nuevoEmpleado.sexo);
+                printf("Ingrese sexo (m/f)\n");
+                while(obtenerSexo(&nuevoEmpleado.sexo) < 0){
+                    printf("\nError! Ingrese sexo correcta!");
                 }
 
-                } while (tolower(nuevoEmpleado.sexo) != 'm' && tolower(nuevoEmpleado.sexo) != 'f');
-
+                fflush(stdin);
                 printf("Ingrese sueldo\n");
-                scanf("%f", &nuevoEmpleado.sueldo);
+                while (obtenerSueldo(&nuevoEmpleado.sueldo) < 0){
+                        printf("Error! Ingrese sueldo valido\n");
+                }
 
-                printf("Ingrese la fecha de hoy\n");
-                scanf("%d/%d/%d", &nuevoEmpleado.fechaIngreso.dia, &nuevoEmpleado.fechaIngreso.mes, &nuevoEmpleado.fechaIngreso.anio);
+                fflush(stdin);
+                printf("Ingrese la fecha de ingreso (dd/mm/2021)\n");
+                while  (obtenerFecha(&nuevoEmpleado.fechaIngreso.dia, &nuevoEmpleado.fechaIngreso.mes, &nuevoEmpleado.fechaIngreso.anio) < 0){
+                    printf("\nError! Ingrese fecha valida (dd/mm/2021)\n");
+                }
+
                 system("cls");
 
                 nuevoEmpleado.isEmpty = 0;
@@ -131,140 +137,23 @@ int ingresarEmpleado(eEmpleado nomina[], int tam, int *pId, eSector sector[], in
     return allRight;
 }
 
-int obtenerNombre(char * cadenaTexto)
-{
-    int allRight = -1;
-
-    if (cadenaTexto != NULL)
-    {
-        if (fixedGets(cadenaTexto, sizeof(cadenaTexto)) == 0 && esNombre(cadenaTexto) && formatearNombre(cadenaTexto))
-        {
-            allRight = 0;
-        }
-
-    }
-    return allRight;
-}
-
-int esNombre(char * cadena)
-{
-    int allRight = 0;
-    if (cadena != NULL && sizeof(cadena) > 0)
-    {
-        allRight = 1;
-        for (int x = 0; x < cadena[x] && cadena[x] != '\0'; x++)
-        {
-            if (((cadena[x] < 65 || cadena[x] > 122) && cadena[x] != ' ' && cadena[x] != '\n') || cadena[0] == ' ' || cadena[strlen(cadena)-2] == ' ') //si no es texto incluyendo espacio y salto de linea, mientras que el espacio no este adelante o al final de la cadena
-            {
-                allRight = 0;
-                break;
-            }
-            if (x > 0)  //evita leer fuera del rango de cadena
-            {
-                if (cadena[x - 1] == ' ' && cadena[x] == ' ')  //si hay por lo menos dos espacios consecutivos
-                {
-                    allRight = 0;
-                    break;
-                }
-            }
-        }
-    }
-    return allRight;
-}
-
-int fixedGets(char * cadena, int longitud)
-{
-    int allRight = -1;
-    if (cadena != NULL && longitud > 0 && fgets(cadena, longitud, stdin)== cadena  && cadena[0] != '\n')
-    {
-        fflush(stdin);
-        if (cadena[strlen(cadena)-1] == '\n')
-        {
-            cadena[strlen(cadena)-1] = '\0';
-        }
-        allRight = 0;
-    }
-    return allRight;
-}
-
-int esEntero(char * cadena) //modificar
-{
-    int allRight = 1; //inicia en verdadero, y de no cumplir algun requisito la funcion le asignara el 0
-
-    if (cadena != NULL && strlen(cadena) > 0){ //si el puntero cadena no apunta al vacio y su largo es mayor a 0
-        for (int x = 0; x < strlen(cadena); x++)
-        {
-            if (cadena[x] < '0' || cadena[x] > '9') //si el caracter no es numerico
-            {
-                allRight = 0;
-                break;
-            }
-        }
-    }
-    return allRight;
-}
-
-int obtenerMayorDeEdad(int * edad)
-{
-    int allRight = -1;
-    char buffer[64];
-
-    if (edad != NULL)
-    {
-        if (fixedGets(buffer, sizeof(buffer)) == 0 && esEntero(buffer))
-        {
-            *edad = atoi(buffer);
-            if (*edad >= 18 && *edad <= 99){
-               allRight = 0;
-            }
-
-        }
-   }
-    return allRight;
-}
-
-int formatearNombre(char * cadena)
-{
-    int allRight = 0;
-    if (cadena != NULL && sizeof(cadena) > 0) //mayuscula para el primer caracter si la necesita
-    {
-        if (cadena[0] >= 97 && cadena[0] <= 122)
-        {
-            cadena[0] -= 32;
-        }
-        for (int x = 1; cadena[x] != '\0'; x++)
-        {
-            if (cadena[x] >= 65 && cadena[x] <= 90) //minuscula para el caracter que la necesite
-            {
-                cadena[x] += 32;
-            }
-            if (x > 0)  //para no leer la posicion de memoria anterior a la cadena
-            {
-                if (cadena[x-1] == ' ')  //para darle mayuscula a iniciales de nombres o apellidos dobles que la necesiten
-                {
-                    if (cadena[x] >= 97 && cadena[x] <= 122)
-                    {
-                        cadena[x] -= 32;
-                    }
-                }
-            }
-        }
-        allRight = 1;
-    }
-    return allRight;
-}
 
 int menu(){
     int opcion;
-
+    fflush(stdin);
     printf("\t\t***Menu principal***");
     printf("\n1. ALTAS");
     printf("\n2. MODIFICAR");
     printf("\n3. BAJA");
     printf("\n4. LISTAR EMPLEADOS");
-    printf("\n5. ORDENAR EMPLEADOS");
-    printf("\n6. INFORMES");
-    printf("\n7. SALIR");
+    printf("\n5. ORDENAR EMPLEADOS");//CAMBIAR ORDENAR EMPLEADOS
+    printf("\n6. INFORMES");//CAMBIAR POR "INFORMES" Y AGREGAR SUBMENU
+    printf("\n7. COMIDAS");
+    printf("\n8. ALTA DE ALMUERZO");
+    printf("\n9. MOSTRAR ALMUERZOS");
+    printf("\n10. Mostrar almuerzos por empleado");
+    printf("\n11. Gasto de almuerzo por empleado");
+    printf("\n12. Salir");
     printf("\nSeleccione una opcion: ");
     scanf("%d", &opcion);
     system("cls");
@@ -288,7 +177,6 @@ int bajaEmpleado(eEmpleado lista[], int tam, eSector sector[], int tamsec){
     int allRight = 0;
     int legajo;
     char respuesta;
-    char nombreSector[20];
     int indice;
     if (lista != NULL && tam > 0){
 
@@ -297,12 +185,12 @@ int bajaEmpleado(eEmpleado lista[], int tam, eSector sector[], int tamsec){
         } else {
             printf("\nIngrese el legajo del cliente a eliminar\n");
             scanf("%d", &legajo);
-            indice = buscarEmpleado(lista, tam, legajo, sector);
+            indice = buscarEmpleado(lista, tam, legajo);
             if (indice == -1){
             printf("\nNo existe empleado con ese N de legajo\n");
             } else {
                 printf("\n");
-                printf("N° Legajo || Nombre || Edad || Sexo || Sueldo|| Fecha\n");
+                printf("N° Legajo || Sector || Nombre || Edad || Sexo || Sueldo|| Fecha\n");
                 mostrarEmpleado(lista[indice], sector, tamsec);
                 printf("\nRealmente quiere dar de baja el empleado? (s/n)\n");
                 fflush(stdin);
@@ -310,8 +198,111 @@ int bajaEmpleado(eEmpleado lista[], int tam, eSector sector[], int tamsec){
 
                 if (respuesta == 's'){
                     lista[indice].isEmpty = 1;
+                    //ELIMINAR ALMUERZO TAMBIEN
+                    allRight = 1;
+                }
+            }
+        }
+    }
+    return allRight;
+}
+
+int obtenerSector(eSector sector[], int tamsec, int * idSector){
+    int allRight = -1;
+    char buffer[64];
+
+    if (idSector != NULL && sector != NULL && tamsec > 0){
+        if (fixedGets(buffer, sizeof(buffer)) == 0 && esEntero(buffer)){
+            *idSector = atoi(buffer);
+            if (*idSector >= sector[0].id && *idSector <= sector[tamsec-1].id){
+                allRight = 0;
+            }
+        }
+    }
+    return allRight;
+}
+
+int modificarEmpleado(eEmpleado lista[], int tam, eSector sector[], int tamsec){
+    int allRight = 0;
+    int legajo;
+    int opcion;
+    char respuesta;
+    int indice;
+    if (lista != NULL && tam > 0){
+
+        if (!hayEmpleado(lista, tam)){
+            printf("\nNo hay empleados cargados en sistema.\n");
+        } else {
+            printf("\nIngrese el legajo del cliente a modificar\n");
+            scanf("%d", &legajo);
+            indice = buscarEmpleado(lista, tam, legajo);
+            if (indice == -1){
+            printf("\nNo existe empleado con ese N de legajo\n");
+            } else {
+                printf("\n");
+                printf("N° Legajo || Sector || Nombre || Edad || Sexo || Sueldo|| Fecha\n");
+                mostrarEmpleado(lista[indice], sector, tamsec);
+                printf("\n\nRealmente quiere modificar los datos de empleado? (s/n)\n");
+                fflush(stdin);
+                scanf("%c", &respuesta);
+                system("cls");
+                fflush(stdin);
+
+                if (respuesta == 's'){
+                    printf("1.Modificar sector\n");
+                    printf("2.Modificar nombre\n");
+                    printf("3.Modificar edad\n");
+                    printf("4.Modificar edad\n");
+                    printf("5.Modificar sueldo\n");
+                    printf("\nIngrese opcion:\n");
+                    scanf("%d", &opcion);
+                    fflush(stdin);
+                    switch(opcion){
+                        case 1:
+                            printf("\nIngreso nuevo sector:\n");
+                            mostrarSectores(sector, tamsec);
+                            printf("\n\nSeleccione uno: ");
+                            while(obtenerSector(sector, tamsec, &lista[indice].idSector) < 0){
+                            printf("\nError!Ingrese sector real!\n");
+                            }
+                        break;
+                        case 2:
+                            printf("Ingrese nuevo nombre\n");
+                            while(obtenerNombre(lista[indice].nombre) < 0){
+                                printf("\nError!Ingrese nombre correcto\n");
+                            }
+                        break;
+                        case 3:
+                            printf("Ingrese nueva edad\n");
+                            while (obtenerMayorDeEdad(&lista[indice].edad) < 0){
+                                printf("\nError! Ingrese edad correcta!");
+                            }
+                        break;
+                        case 4:
+                             do{
+                                printf("Ingrese nuevo sexo (m/f)\n");
+                                fflush(stdin);
+                                scanf("%c", &lista[indice].sexo);
+
+                                if (tolower(lista[indice].sexo) != 'm' && tolower(lista[indice].sexo) != 'f'){
+                                    printf("\nError! Ingrese sexo\n");
+                                    fflush(stdin);
+                                    scanf("%c", &lista[indice].sexo);
+                                }
+
+                            } while (tolower(lista[indice].sexo) != 'm' && tolower(lista[indice].sexo) != 'f');
+                        break;
+                        case 5:
+                            printf("Ingrese nuevo sueldo\n");
+                            while (obtenerSueldo(&lista[indice].sueldo) < 0){
+                            printf("Error! Ingrese sueldo valido\n");
+                            }
+                        break;
+                        default:
+                            printf("\nOpcion incorrecta!\n");
+                    }
                 } else {
-                    printf("\nNo se ha dado de baja al empleado\n");
+                    printf("\nModificacion exitosa\n");
                     allRight = 0;
                 }
             allRight = 1;
@@ -320,3 +311,60 @@ int bajaEmpleado(eEmpleado lista[], int tam, eSector sector[], int tamsec){
     }
     return allRight;
 }
+
+int buscarNombreEmpleado(eEmpleado lista[], int tam, int legajo, char * nombreEmpleado){
+    int allRight = 0;
+    for (int x = 0; x < tam; x++){
+        if (lista[x].legajo == legajo && lista[x].isEmpty == 0){
+            strcpy(nombreEmpleado, lista[x].nombre);
+            allRight = 1;
+            break;
+        }
+    }
+    return allRight;
+}
+
+int menuOrdenar(){
+    int opcion;
+    printf("\n1.Ordenar por legajo");
+    printf("\n2. Ordenar por nombre");
+    printf("\n3. Ordenar por edad");
+    printf("\n4. Ordenar por sueldo");
+    scanf("%d", &opcion);
+    system("cls");
+    return opcion;
+
+}
+
+int ordenarEmpleados(eEmpleado lista[], int tam, eSector sectores[], int tamsec){
+    int allRight = 1;
+    int opcion;
+    int orden;
+    eEmpleado auxEmpleado;
+    opcion = menuOrdenar();
+    printf("\n\nOrden ascendente(1) o descendente(2)?");
+    scanf("%d", &orden);
+    switch (opcion){
+    case 1:
+        for (int x = 0; x < tam - 1; x++){
+            for (int y = x + 1; y < tam; y++){
+                if ((lista[x].legajo > lista[y].legajo && orden == 1) || (lista[x].legajo < lista[y].legajo && orden == 2)){
+                    auxEmpleado = lista[x];
+                    lista[x] = lista[y];
+                    lista[y] = auxEmpleado;
+                }
+            }
+        }
+        break;
+    case 2:
+        break;
+    case 3:
+        break;
+    case 4:
+        break;
+    }
+    mostrarEmpleados(lista, tam, sectores, tamsec);
+    return allRight;
+}
+
+

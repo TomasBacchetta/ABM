@@ -17,10 +17,10 @@
 	<ctype.h>
 	"Empleados.h"
 
-1619548684 source:c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 12\abm\empleados.h
+1619757805 source:c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 12\abm\empleados.h
 	"sectores.h"
 
-1619503650 source:c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 12\abm\main.c
+1619755164 source:c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 12\abm\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -28,26 +28,28 @@
 	"Empleados.h"
 	"sectores.h"
 
-1619548684 c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 12\abm\empleados.h
+1619757805 c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 12\abm\empleados.h
 	"sectores.h"
 
-1619548727 source:c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 12\abm\empleados.c
+1619819149 source:c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 12\abm\empleados.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<ctype.h>
 	"Empleados.h"
 	"sectores.h"
+	"utn_inputs.h"
 
-1619500877 c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 12\abm\sectores.h
+1619757546 c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 12\abm\sectores.h
 
-1619503650 source:c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 12\abm\sectores.c
+1619757834 source:c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 12\abm\sectores.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<ctype.h>
 	"Empleados.h"
 	"sectores.h"
+	"utn_inputs.h"
 
 1619503527 source:e:\backupo\abm\empleados.c
 	<stdio.h>
@@ -81,7 +83,37 @@
 	"Empleados.h"
 	"sectores.h"
 
-1619743970 source:c:\users\tomas\desktop\abm-main\empleados.c
+1619757805 source:c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 12\abm\utn_inputs.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"Empleados.h"
+	"sectores.h"
+	"utn_inputs.h"
+
+1619757805 c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 12\abm\utn_inputs.h
+
+1619830452 source:c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 13\abm\empleados.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"Empleados.h"
+	"sectores.h"
+	"utn_inputs.h"
+
+1619828749 c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 13\abm\empleados.h
+	"sectores.h"
+
+1619757546 c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 13\abm\sectores.h
+
+1619826784 c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 13\abm\utn_inputs.h
+
+1619828749 source:c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 13\abm\empleados.h
+	"sectores.h"
+
+1619828996 source:c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 13\abm\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -89,15 +121,25 @@
 	"Empleados.h"
 	"sectores.h"
 
-1619743970 c:\users\tomas\desktop\abm-main\empleados.h
+1619757834 source:c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 13\abm\sectores.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"Empleados.h"
 	"sectores.h"
+	"utn_inputs.h"
 
-1619743970 c:\users\tomas\desktop\abm-main\sectores.h
-
-1619743970 source:c:\users\tomas\desktop\abm-main\empleados.h
+1619826819 source:c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 13\abm\utn_inputs.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"Empleados.h"
 	"sectores.h"
+	"utn_inputs.h"
 
-1619743970 source:c:\users\tomas\desktop\abm-main\main.c
+1620021402 source:c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 13\abm - copia\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -105,11 +147,391 @@
 	"Empleados.h"
 	"sectores.h"
 
-1619743970 source:c:\users\tomas\desktop\abm-main\sectores.c
+1620020819 c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 13\abm - copia\empleados.h
+	"sectores.h"
+
+1619757546 c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 13\abm - copia\sectores.h
+
+1619757834 source:c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 13\abm - copia\sectores.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<ctype.h>
 	"Empleados.h"
 	"sectores.h"
+	"utn_inputs.h"
+
+1620073919 c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 13\abm - copia\utn_inputs.h
+
+1620074598 source:c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 13\abm - copia\utn_inputs.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"Empleados.h"
+	"sectores.h"
+	"utn_inputs.h"
+
+1620018190 source:c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 13\abm - copia\datawarehouse.h
+
+1620020819 source:c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 13\abm - copia\empleados.h
+	"sectores.h"
+
+1620074565 source:c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 13\abm - copia\empleados.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"Empleados.h"
+	"sectores.h"
+	"utn_inputs.h"
+
+1620018190 c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 13\abm - copia\datawarehouse.h
+
+1620325905 source:c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 14\abm - copia\empleados.h
+	"fecha.h"
+	"sectores.h"
+
+1619757546 c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 14\abm - copia\sectores.h
+
+1620085031 source:c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 14\abm - copia\sectores.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"Empleados.h"
+	"sectores.h"
+	"utn_inputs.h"
+	"informes.h"
+	"almuerzo.h"
+
+1620325905 c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 14\abm - copia\empleados.h
+	"fecha.h"
+	"sectores.h"
+
+1620325916 c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 14\abm - copia\utn_inputs.h
+
+1620325893 source:c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 14\abm - copia\empleados.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"empleados.h"
+	"sectores.h"
+	"utn_inputs.h"
+	"informes.h"
+
+1620257244 source:c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 14\abm - copia\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"empleados.h"
+	"sectores.h"
+	"informes.h"
+	"comida.h"
+	"almuerzo.h"
+
+1620366993 source:c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 14\abm - copia\utn_inputs.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"empleados.h"
+	"sectores.h"
+	"utn_inputs.h"
+
+1620079311 c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 14\abm - copia\informes.h
+	"empleados.h"
+
+1620079984 source:c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 14\abm - copia\informes.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"utn_inputs.h"
+	"empleados.h"
+	"sectores.h"
+	"informes.h"
+
+1620079311 source:c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 14\abm - copia\informes.h
+	"empleados.h"
+
+1620258867 source:c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 14\abm - copia\almuerzo.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"empleados.h"
+	"sectores.h"
+	"informes.h"
+	"comida.h"
+	"almuerzo.h"
+
+1620088086 source:c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 14\abm - copia\comida.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"empleados.h"
+	"sectores.h"
+	"informes.h"
+	"comida.h"
+
+1620257059 source:c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 14\abm - copia\almuerzo.h
+	"fecha.h"
+	"comida.h"
+	"empleados.h"
+
+1620087815 source:c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 14\abm - copia\comida.h
+
+1620081658 c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 14\abm - copia\fecha.h
+
+1620081658 source:c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 14\abm - copia\fecha.h
+
+1620087815 c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 14\abm - copia\comida.h
+
+1620257059 c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 14\abm - copia\almuerzo.h
+	"fecha.h"
+	"comida.h"
+	"empleados.h"
+
+1620425007 source:c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 15\abm - copia\almuerzo.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"empleados.h"
+	"sectores.h"
+	"informes.h"
+	"comida.h"
+	"almuerzo.h"
+	"utn_inputs.h"
+
+1620424124 c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 15\abm - copia\empleados.h
+	"fecha.h"
+	"sectores.h"
+
+1620081658 c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 15\abm - copia\fecha.h
+
+1619757546 c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 15\abm - copia\sectores.h
+
+1620426058 c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 15\abm - copia\informes.h
+	"empleados.h"
+
+1620087815 c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 15\abm - copia\comida.h
+
+1620257059 c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 15\abm - copia\almuerzo.h
+	"fecha.h"
+	"comida.h"
+	"empleados.h"
+
+1620257059 source:c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 15\abm - copia\almuerzo.h
+	"fecha.h"
+	"comida.h"
+	"empleados.h"
+
+1620088086 source:c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 15\abm - copia\comida.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"empleados.h"
+	"sectores.h"
+	"informes.h"
+	"comida.h"
+
+1620087815 source:c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 15\abm - copia\comida.h
+
+1620424616 source:c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 15\abm - copia\empleados.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"empleados.h"
+	"sectores.h"
+	"utn_inputs.h"
+	"informes.h"
+
+1620325916 c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 15\abm - copia\utn_inputs.h
+
+1620424124 source:c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 15\abm - copia\empleados.h
+	"fecha.h"
+	"sectores.h"
+
+1620081658 source:c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 15\abm - copia\fecha.h
+
+1620429913 source:c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 15\abm - copia\informes.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"utn_inputs.h"
+	"empleados.h"
+	"sectores.h"
+	"informes.h"
+
+1620426058 source:c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 15\abm - copia\informes.h
+	"empleados.h"
+
+1620429728 source:c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 15\abm - copia\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"empleados.h"
+	"sectores.h"
+	"informes.h"
+	"comida.h"
+	"almuerzo.h"
+
+1620085031 source:c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 15\abm - copia\sectores.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"Empleados.h"
+	"sectores.h"
+	"utn_inputs.h"
+	"informes.h"
+	"almuerzo.h"
+
+1620421004 source:c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 15\abm - copia\utn_inputs.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"empleados.h"
+	"sectores.h"
+	"utn_inputs.h"
+
+1620494099 source:c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 15\abm - copia - copia\almuerzo.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"empleados.h"
+	"sectores.h"
+	"informes.h"
+	"comida.h"
+	"almuerzo.h"
+	"utn_inputs.h"
+	"datawarehouse.h"
+
+1620433414 c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 15\abm - copia - copia\empleados.h
+	"fecha.h"
+	"sectores.h"
+
+1620081658 c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 15\abm - copia - copia\fecha.h
+
+1619757546 c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 15\abm - copia - copia\sectores.h
+
+1620435599 c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 15\abm - copia - copia\informes.h
+	"empleados.h"
+	"almuerzo.h"
+
+1620087815 c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 15\abm - copia - copia\comida.h
+
+1620436980 c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 15\abm - copia - copia\almuerzo.h
+	"fecha.h"
+	"comida.h"
+	"empleados.h"
+
+1620325916 c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 15\abm - copia - copia\utn_inputs.h
+
+1620436980 source:c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 15\abm - copia - copia\almuerzo.h
+	"fecha.h"
+	"comida.h"
+	"empleados.h"
+
+1620088086 source:c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 15\abm - copia - copia\comida.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"empleados.h"
+	"sectores.h"
+	"informes.h"
+	"comida.h"
+
+1620087815 source:c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 15\abm - copia - copia\comida.h
+
+1620494099 source:c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 15\abm - copia - copia\empleados.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"empleados.h"
+	"sectores.h"
+	"utn_inputs.h"
+	"informes.h"
+	"datawarehouse.h"
+
+1620433414 source:c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 15\abm - copia - copia\empleados.h
+	"fecha.h"
+	"sectores.h"
+
+1620081658 source:c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 15\abm - copia - copia\fecha.h
+
+1620440468 source:c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 15\abm - copia - copia\informes.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"utn_inputs.h"
+	"empleados.h"
+	"sectores.h"
+	"informes.h"
+
+1620435599 source:c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 15\abm - copia - copia\informes.h
+	"empleados.h"
+	"almuerzo.h"
+
+1620494399 source:c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 15\abm - copia - copia\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"empleados.h"
+	"sectores.h"
+	"informes.h"
+	"comida.h"
+	"almuerzo.h"
+	"datawarehouse.h"
+
+1620085031 source:c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 15\abm - copia - copia\sectores.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"Empleados.h"
+	"sectores.h"
+	"utn_inputs.h"
+	"informes.h"
+	"almuerzo.h"
+
+1620421004 source:c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 15\abm - copia - copia\utn_inputs.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"empleados.h"
+	"sectores.h"
+	"utn_inputs.h"
+
+1620494243 c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 15\abm - copia - copia\datawarehouse.h
+
+1620432618 source:c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 15\abm - copia - copia\datawarehouse.h
+
+1620494282 source:c:\users\tomas\desktop\utn\laboratorio i\lenguajec\clase 15\abm - copia - copia\datawarehouse.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"empleados.h"
+	"sectores.h"
+	"informes.h"
+	"comida.h"
+	"almuerzo.h"
+	"datawarehouse.h"
 

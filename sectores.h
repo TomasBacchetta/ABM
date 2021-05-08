@@ -9,3 +9,7 @@ struct{
 
 
 #endif // SECTORES_H_INCLUDED
+
+void mostrarSector(eSector sector);
+void mostrarSectores(eSector sector[], int tam);
+void buscarSector(int idSector, eSector sector[], int tam, char * nombreSector);

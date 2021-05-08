@@ -31,10 +31,35 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="Empleados.c">
+		<Unit filename="almuerzo.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="Empleados.h">
+		<Unit filename="almuerzo.h">
+			<Option compile="1" />
+		</Unit>
+		<Unit filename="comida.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="comida.h">
+			<Option compile="1" />
+		</Unit>
+		<Unit filename="datawarehouse.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="datawarehouse.h" />
+		<Unit filename="empleados.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="empleados.h">
+			<Option compile="1" />
+		</Unit>
+		<Unit filename="fecha.h">
+			<Option compile="1" />
+		</Unit>
+		<Unit filename="informes.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="informes.h">
 			<Option compile="1" />
 		</Unit>
 		<Unit filename="main.c">
@@ -44,6 +69,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="sectores.h" />
+		<Unit filename="utn_inputs.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="utn_inputs.h" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>
